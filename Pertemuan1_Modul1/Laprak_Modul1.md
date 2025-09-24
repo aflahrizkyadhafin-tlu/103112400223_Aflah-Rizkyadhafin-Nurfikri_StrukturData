@@ -237,11 +237,11 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/pertemuan1_modul1/unguided/screenshot/Screenshot1_1.png)
+![Screenshot Output Unguided 1_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot1_1.png)
 
 ##### Output 2
 
-![Screenshot Output Unguided 1_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/pertemuan1_modul1/unguided/screenshot/Screenshot1_2.png)
+![Screenshot Output Unguided 1_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot1_2.png)
 
 Pada soal ini, diperintahkan untuk membuat sebuah program yang akan melakukan operasi pertambahan, pengurangan, perkalian, dan pembagian. Program ini akan meminta 2 buah input, untuk variable <b>angka 1</b> dan <b>angka 2</b>. Output yang dihasilkan berupa hasil dari setiap operasi yang dilakukan.
 
@@ -316,11 +316,11 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/pertemuan1_modul1/unguided/screenshot/Screenshot2_1.png)
+![Screenshot Output Unguided 2_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot2_1.png)
 
 ##### Output 2
 
-![Screenshot Output Unguided 2_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/pertemuan1_modul1/unguided/screenshot/Screenshot2_2.png)
+![Screenshot Output Unguided 2_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot2_2.png)
 
 Program ini berfungsi untuk mengubah input angka yang diberikan oleh user, ke dalam bentuk tulisan. Program ini membuat sebuah variable yang akan menampung sebuah angka untuk selanjutnya setiap digit angka akan dibaca oleh program. Apabila berjumlah 3 digit, maka program akan membaca sebagai ratusan, jika 2 digit, maka program akan membaca sebagai puluhan/belasan dan jika 1 digit, maka program akan membaca sebagai satuan.
 
@@ -362,11 +362,11 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 3_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/pertemuan1_modul1/unguided/screenshot/Screenshot3_1.png)
+![Screenshot Output Unguided 3_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot3_1.png)
 
 ##### Output 2
 
-![Screenshot Output Unguided 3_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/pertemuan1_modul1/unguided/screenshot/Screenshot3_2.png)
+![Screenshot Output Unguided 3_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot3_2.png)
 
 Program ini berfungsi untuk memberikan output sesuai dengan format yang diberikan pada soal. Program ini menggunakan 4 perulangan yang akan mencetak value dari i, jumlah space kosong dan bintang untuk membentuk pola yang diberikan.
 
