@@ -47,7 +47,7 @@ int main()
 }
 ```
 
-<!-- Program ini dibuat untuk melakukan proses input dan output dalam bahasa C++. Program ini membuat 2 varible (angka 1 & angka 2) dengan tipe data integer, yang selanjutnya akan diinput dengan sejumlah value. Value yang telah diinput, akan di outputkan kembali setelah dilakukan operasi pertambahan, pengurangan, perkalian, pembagian dan modulus. -->
+Program ini dibuat untuk menjelaskan bagaimana cara membuat dan menggunakan value yang tersimpan pada array 1 dimensi.
 
 ### 2. Array 2 Dimensi
 
@@ -109,7 +109,7 @@ int main()
 }
 ```
 
-<!-- Tugas guided nomor 2, membuat program yang bertujuan untuk menjalankan proses percabangan dengan C++. Program ini akan meminta input untuk 2 buah variable, untuk selanjutnya value dari kedua variable akan dibandingkan (lebih besar / lebih kecil / sama dengan / tidak sama dengan). -->
+Program ini dibuat untuk menjelaskan bagaimana cara membuat dan menggunakan value yang tersimpan pada array 2 dimensi. Pada program ini juga diberlakukan operasi penjumlahan dan perkalian matriks.
 
 ### 3. Fungsi
 
@@ -164,7 +164,7 @@ int main()
 }
 ```
 
-<!-- Pada persoalan kali ini, program yang dibuat adalah program untuk melakukan operasi perulangan. Dimana program akan meminta input <b>angka 1</b> dan <b> angka 2</b>. Nilai dari kedua variable tersebut akan dijadikan kondisi di dalam perulangan. Pada bagian output, program akan memberikan output value dari i sebanyak value pada angka satu dan value pada angka 2 + 20. -->
+Syntax ini menjelaskan bagaimana cara membuat dan memanggil function dan prosedur pada bahasa pemrograman C++. Pada setiap fungsi dan prosedur membutuhkan parameter untuk memenuhi aksi yang ada di dalamnya. Fungsi CariMAX akan mengembalikan nilai dengan tipe data integer sedangkan prosedur tidak akan mengembalikan nilai apapun.
 
 ### 4. Pointer
 
@@ -198,7 +198,7 @@ int main()
 }
 ```
 
-<!-- Seperti pada no. 4, program ini berfungsi untuk melakukan operasi perulangan. Namun hal yang membedakan adalah pada bagian ini, program menggunakan operasi perulangan while dan do-while. -->
+Program ini menjelaskan tentang cara penggunaan pointer baik untuk menyimpan address suatu variable maupun untuk penggunaannya di dalam sebuah fungsi. Pointer berfungsi untuk menyimpan sebuah address dari suatu variable. Ketika pointer di output tanpa menggunakan tanda "_" maka nilai yang dioutput merupakan address yang tersimpan. Namun apabila symbol "_" digunakan maka nilai dari address yang tersimpan akan dioutput.
 
 ### 5. Reference
 
@@ -237,7 +237,7 @@ int main()
 }
 ```
 
-<!-- Program ini berfungsi untuk memperkenalkan cara membuat structure pada bahasa C++. Pada program ini structure yang dibuat bernama rapot dengan properti nama bertipe data char panjang 5, dan properti jumlah bertipe data int. Di sampaikan juga cara untuk mengubah dan menampilkan isi dari sebuah struct. -->
+Program ini berfungsi untuk menjelaskan bagaimana cara menggunakan suatu reference di C++. Program ini menggunakan sebuah fungsi untuk menerapkan cara penggunaan sebuah reference. Perbedaan dengan pointer ialah, untuk reference kita hanya perlu mengirimkan langsung address ke parameter dari sebuah fungsi.
 
 ## Unguided
 
@@ -335,11 +335,53 @@ int main()
 
 <!-- ![Screenshot Output Unguided 1_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot1_2.png) -->
 
-<!-- Pada soal ini, diperintahkan untuk membuat sebuah program yang akan melakukan operasi pertambahan, pengurangan, perkalian, dan pembagian. Program ini akan meminta 2 buah input, untuk variable <b>angka 1</b> dan <b>angka 2</b>. Output yang dihasilkan berupa hasil dari setiap operasi yang dilakukan. -->
+Program ini dibuat untuk menjelaskan bagaimana cara membuat dan menggunakan value yang tersimpan pada array 3x3. Pada program ini juga diberlakukan operasi penjumlahan, pengurangan dan perkalian matriks.
 
 ### 2. Berdasarkan guided pointer dan reference sebelumnya, buatlah keduanya dapat menukar nilai dari 3 variabel
 
 ```C++
+#include <iostream>
+using namespace std;
+
+void tukarNilaiPointer(int *a, int *b, int *c)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = *c;
+    *c = temp;
+}
+
+void tukarNilaiReference(int &a, int &b, int &c)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = c;
+    c = temp;
+}
+
+int main()
+{
+    int a = 30, b = 15, c = 20;
+
+    // Menukar nilai a dengan b
+    tukarNilaiPointer(&a, &b, &c);
+    cout << "Hasil pertukaran a, b dan c dengan pointer" << endl;
+    cout << "Nilai a = " << a << endl;
+    cout << "Nilai b = " << b << endl;
+    cout << "Nilai c = " << c << endl
+         << endl;
+
+    // Menukar nilai b dengan c
+    tukarNilaiReference(a, b, c);
+    cout << "Hasil pertukaran a, b dan c dengan reference" << endl;
+    cout << "Nilai a = " << a << endl;
+    cout << "Nilai b = " << b << endl;
+    cout << "Nilai c = " << c << endl;
+
+    return 0;
+}
 
 ```
 
@@ -353,7 +395,7 @@ int main()
 
 <!-- ![Screenshot Output Unguided 2_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot2_2.png) -->
 
-<!-- Program ini berfungsi untuk mengubah input angka yang diberikan oleh user, ke dalam bentuk tulisan. Program ini membuat sebuah variable yang akan menampung sebuah angka untuk selanjutnya setiap digit angka akan dibaca oleh program. Apabila berjumlah 3 digit, maka program akan membaca sebagai ratusan, jika 2 digit, maka program akan membaca sebagai puluhan/belasan dan jika 1 digit, maka program akan membaca sebagai satuan. -->
+Program ini berfungsi untuk menukar nilai dari varibel a, b dan c, menggunakan metode pointer dan referensi. Untuk percobaan pertama program akan menukar nilai <b>a</b> dengan <b>b</b>, nilai <b>b</b> dengan <b>c</b> dan nilai <b>c</b> dengan <b>a</b> menggunakan prosedur tukaiNilaiPointer, sedangkan pada percobaan kedua menggunakan prosedur tukarNilaiReference.
 
 ### 3. Diketahui sebuah array 1 dimensi sebagai berikut :
 
@@ -452,7 +494,7 @@ int main()
 
 <!-- ![Screenshot Output Unguided 3_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot3_2.png) -->
 
-<!-- Program ini berfungsi untuk memberikan output sesuai dengan format yang diberikan pada soal. Program ini menggunakan 4 perulangan yang akan mencetak value dari i, jumlah space kosong dan bintang untuk membentuk pola yang diberikan. -->
+Program ini memiliki fungsi untuk menampilkan nilai, mencari nilai maksimum, minimum dan rata-rata dari suatu array. Program ini menggunakan 2 fungsi (cariMaksimum dan cari Minimum) yang mengembalikan nilai dengan tipe data integer, serta menggunakan 1 prosedur (hitungRataRata).
 
 ## Kesimpulan
 
