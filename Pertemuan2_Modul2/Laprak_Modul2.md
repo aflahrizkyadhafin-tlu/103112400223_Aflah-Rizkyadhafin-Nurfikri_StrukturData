@@ -8,17 +8,19 @@
 
 ### A. Pengenalan Struktur Code C++<br/>
 
-<!-- Materi ini menjelaskan syntax dasar dan operasi yang bisa dilakukan pada bahasa pemrograman C++. Pada bagian ini dijelaskan cara menuliskan struktur kode C++, tipe data, operasi serta cara melakukan percabangan dan pengulangan di C++. -->
+Materi ini menjelaskan tentang bagaimana cara penggunaan array, pointer, fungsi, prosedur dan parameter pada fungsi/prosedur. Array yang diperkenalkan sebanyak 2 jenis, yaitu array 1 dimensi dan 2 dimensi. Materi juga meliputi cara penggunaan operator pada value di setiap index array. Dijelaskan juga perbedaan antara pointer dan reference dari segi penggunaannya. terakhir materi ini membahas seputar function dan prosedur serta cara menambahkan parameternya.
 
 #### 1. Array
 
 #### 2. Pointer
 
-#### 3. Fungsi
+#### 3. Reference
 
-#### 4. Prosedur
+#### 4. Fungsi
 
-#### 5. Parameter Fungsi
+#### 5. Prosedur
+
+#### 6. Parameter Fungsi
 
 ## Guided
 
@@ -329,11 +331,7 @@ int main()
 
 ##### Output 1
 
-<!-- ![Screenshot Output Unguided 1_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot1_1.png) -->
-
-##### Output 2
-
-<!-- ![Screenshot Output Unguided 1_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot1_2.png) -->
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot1.png)
 
 Program ini dibuat untuk menjelaskan bagaimana cara membuat dan menggunakan value yang tersimpan pada array 3x3. Pada program ini juga diberlakukan operasi penjumlahan, pengurangan dan perkalian matriks.
 
@@ -389,11 +387,7 @@ int main()
 
 ##### Output 1
 
-<!-- ![Screenshot Output Unguided 2_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot2_1.png) -->
-
-##### Output 2
-
-<!-- ![Screenshot Output Unguided 2_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot2_2.png) -->
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot2.png)
 
 Program ini berfungsi untuk menukar nilai dari varibel a, b dan c, menggunakan metode pointer dan referensi. Untuk percobaan pertama program akan menukar nilai <b>a</b> dengan <b>b</b>, nilai <b>b</b> dengan <b>c</b> dan nilai <b>c</b> dengan <b>a</b> menggunakan prosedur tukaiNilaiPointer, sedangkan pada percobaan kedua menggunakan prosedur tukarNilaiReference.
 
@@ -488,27 +482,27 @@ int main()
 
 ##### Output 1
 
-<!-- ![Screenshot Output Unguided 3_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot3_1.png) -->
+![Screenshot Output Unguided 3_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot3_1.png)
 
 ##### Output 2
 
-<!-- ![Screenshot Output Unguided 3_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan1_Modul1/Unguided/Screenshot/Screenshot3_2.png) -->
+![Screenshot Output Unguided 3_2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot3_2.png)
+
+##### Output 3
+
+![Screenshot Output Unguided 3_3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot3_3.png)
+
+##### Output 4
+
+![Screenshot Output Unguided 3_4](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot3_4.png)
 
 Program ini memiliki fungsi untuk menampilkan nilai, mencari nilai maksimum, minimum dan rata-rata dari suatu array. Program ini menggunakan 2 fungsi (cariMaksimum dan cari Minimum) yang mengembalikan nilai dengan tipe data integer, serta menggunakan 1 prosedur (hitungRataRata).
 
 ## Kesimpulan
 
-<!-- Pada bagian modul 1, diberikan pengetahuan dasar terkait bahasa pemrograman C++. Materi yang diberikan diantaranya :
-
-<ol>
-    <li>Tipe data</li>
-    <li>Operasi Aritmatika</li>
-    <li>Operasi Logika</li>
-    <li>Percabangan</li>
-    <li>Perulangan</li>
-</ol> -->
+Kesimpulan dari materi pertemuan kali ini, materi ini mengajarkan bagaimana penggunaan tipe data dan operasi dasar pada bahasa pemrograman C++. Tipe data yang dimaksud adalah array, baik itu array 1 dimensi dan array 2 dimensi dengan operasi pertambahan, pengurangan dan perkalian. Selanjutnya pada bagian fungsi dan reference dijelaskan bagaimana cara untuk menuliskan serta pengaplikasiaannya dalam suatu fungsi/pointer. Untuk pointer kita memerlukan suatu variabel tipe pointer untuk menyimpan address dari suatu variabel, sedangkan untuk reference kita bisa langsung mengirimkan addressnya ke parameter fungsi/prosedur.
 
 ## Referensi
 
-<!-- <br>[1] Indahyanti, U., & Rahmawati, Y. (2020). Buku Ajar Algoritma Dan Pemrograman Dalam Bahasa C++. Umsida Press, 1-146. Diakses pada 25 September 2025 melalui https://press.umsida.ac.id/index.php/umsidapress/article/view/978-623-6833-67-4/759.
-<br> -->
+<br>[1] Indahyanti, U., & Rahmawati, Y. (2020). Buku Ajar Algoritma Dan Pemrograman Dalam Bahasa C++. Umsida Press, 1-146. Diakses pada 25 September 2025 melalui https://press.umsida.ac.id/index.php/umsidapress/article/view/978-623-6833-67-4/759.
+<br>
