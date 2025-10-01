@@ -4,7 +4,7 @@
 
 ## Dasar Teori
 
-<!-- C++ merupakan bahasa pemrograman yang dikembangkan berdasarkan bahasa C. Bahasa C++ sudah digunakan oleh berbagai aplikasi besar, seperti Google Earth dan Skype [1]. Pada bahasa C++, terdapat berbagai perintah yang bisa dilakukan, seperti membuat variable, melakukan operasi serta membuat function. -->
+Bahasa pemrograman C++ termasuk bahasa beraras-tinggi yang menggunakan kata-kata bahasa Inggris sehingga mudah dipahami oleh manusia, seperti IF dan AND [1]. Saat ini, C++ telah distandarisasi oleh ANSI dan ISO dengan tambahan fitur-fitur yang belum ada di versi klasik, termasuk dukungan pemrograman berorientasi objek [2]. Dengan demikian, C++ menjadi bahasa yang banyak disukai oleh programmer karena kemudahan dan kemampuannya.
 
 ### A. Pengenalan Struktur Code C++<br/>
 
@@ -504,5 +504,7 @@ Kesimpulan dari materi pertemuan kali ini, materi ini mengajarkan bagaimana peng
 
 ## Referensi
 
-<br>[1] Indahyanti, U., & Rahmawati, Y. (2020). Buku Ajar Algoritma Dan Pemrograman Dalam Bahasa C++. Umsida Press, 1-146. Diakses pada 25 September 2025 melalui https://press.umsida.ac.id/index.php/umsidapress/article/view/978-623-6833-67-4/759.
+<br>[1] Dewi, L. J. E. (2010). Media Pembelajaran Bahasa Pemrograman C++. Jurnal Pendidikan Teknologi dan Kejuruan, 7(1). Diakses pada 1 Oktober 2025 melalui https://ejournal.undiksha.ac.id/index.php/JPTK/article/download/31/25.
+<br>
+<br>[2] Indahyanti, U., & Rahmawati, Y. (2020). Buku Ajar Algoritma Dan Pemrograman Dalam Bahasa C++. Umsida Press, 1-146. Diakses pada 1 Oktober 2025 melalui https://press.umsida.ac.id/index.php/umsidapress/article/view/978-623-6833-67-4/759.
 <br>
