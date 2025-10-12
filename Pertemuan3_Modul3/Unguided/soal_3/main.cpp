@@ -15,8 +15,12 @@ int main()
     cout << "--------------- Awal ---------------" << endl;
     tampil_array(arrA);
     tampil_array(arrB);
-    cout << "--------------- Ubah ---------------" << endl;
+    cout << "--------------- Tukar isi array ---------------" << endl;
     tukar_isi_array(arrA, arrB);
+    tampil_array(arrA);
+    tampil_array(arrB);
+    cout << "--------------- Tukar isi variable ---------------" << endl;
+    tukar_isi_variable(point1, point2);
     tampil_array(arrA);
     tampil_array(arrB);
     return 0;
