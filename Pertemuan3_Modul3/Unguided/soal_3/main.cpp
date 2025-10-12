@@ -12,7 +12,11 @@ int main()
 
     point1 = &arrA[1][0];
     point2 = &arrB[1][2];
-    tukar_isi_array(&arrA, &arrB);
+    cout << "--------------- Awal ---------------" << endl;
+    tampil_array(arrA);
+    tampil_array(arrB);
+    cout << "--------------- Ubah ---------------" << endl;
+    tukar_isi_array(arrA, arrB);
     tampil_array(arrA);
     tampil_array(arrB);
     return 0;
