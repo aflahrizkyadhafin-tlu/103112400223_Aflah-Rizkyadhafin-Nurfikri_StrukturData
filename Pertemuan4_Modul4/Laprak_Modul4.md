@@ -658,7 +658,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan4_Modul4/Unguided/screenshot/screenshot_1.png)
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan4_Modul4/Unguided/Screenshot/screenshot_1.png)
 
 Kode ini mengelola struktur data singly linked list dengan beberapa fungsi dasar, antara lain createList untuk menginisialisasi list kosong, alokasi untuk membuat node baru dengan nilai tertentu, dealokasi untuk menghapus node, insertFirst untuk menambahkan node di awal list, serta printInfo untuk menampilkan semua isi list.
 
@@ -847,7 +847,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan4_Modul4/Unguided/screenshot/screenshot_2.png)
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan4_Modul4/Unguided/Screenshot/screenshot_2.png)
 
 Lanjutan dari program unguided 1, dimana pada bagian unguided 2 ditambahkan prosedur deleteFirst(), deleteAfter(), deleteLast(), deleteList() dan nbList(). Prosedur deleteFirst berfungsi untuk menghapus node pertama, deleteAfter untuk menghapus node setelah node tertentu, deleteLast untuk menghapus node terakhir, deleteList untuk menghapus seluruh node dan nbList untuk menampilkan jumlah node yang tersedia pada suatu list.
 
