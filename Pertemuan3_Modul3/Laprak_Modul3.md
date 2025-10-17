@@ -168,7 +168,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot1.png)
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan3_Modul3/Unguided/screenshot/screenshot_1.png)
 
 Program ini bertujuan untuk menyimpan 10 data mahasiswa ke dalam sebuah array. Setiap data mahasiswa merupakan sebuah struct yang menyimpan properti nama, nim, uts, uas, tugas dan nilai akhir.
 
@@ -257,7 +257,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot3_1.png)
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan3_Modul3/Unguided/screenshot/screenshot_2.png)
 
 Program ini merupakan implementasi dari materi ADT. Program ini membagi program ke dalam 2 modul (pelajaran.h dan pelajaran.cpp) dan 1 modul interface (main.cpp). Seluruh prosedur yang akan digunakan ditulis terlebih dahulu pada file pelajaran.h lalu diimplementasikan pada file pelajaran.cpp. Untuk pemanggilan setiap prosedur, dilakukan di file main.cpp. Program ini bertujuan untuk membuat sebuah varibel dengan tipe data pelajaran, yang kemudian akan diisi value dan diprint menggunakan prosedur.
 
@@ -364,7 +364,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 3_1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan2_Modul2/Unguided/Screenshot/Screenshot3_1.png)
+![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan3_Modul3/Unguided/screenshot/screenshot_3.png)
 
 Program ini memiliki 3 prosedur utama, <b>tampil_array</b>,<b>tukar_isi_array</b> dan <b>tukar_isi_variable</b>. Prosedur <b>tampil_array</b> berfungsi untuk menampilkan setiap isi dari array yang diberikan. Lalu, prosedur <b>tukar_isi_array</b> berfungsi untuk menukar isi dari array pertama dan array kedua. Terakhir prosedur <b>tukar_isi_variable</b> berfungsi untuk menukar isi dari variabel yang ditujuk oleh dua buah pointer.
 

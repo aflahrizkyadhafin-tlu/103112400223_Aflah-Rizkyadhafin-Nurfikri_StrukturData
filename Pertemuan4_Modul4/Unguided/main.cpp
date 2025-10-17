@@ -22,5 +22,13 @@ int main()
     insertFirst(L, P5);
 
     printInfo(L);
+
+    deleteFirst(L);
+    deleteAfter(P4);
+    deleteLast(L);
+    nbList(L);
+    deleteList(L);
+    nbList(L);
+
     return 0;
 }
