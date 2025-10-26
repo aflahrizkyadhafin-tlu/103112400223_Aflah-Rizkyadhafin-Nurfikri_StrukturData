@@ -1,25 +1,34 @@
 #include "listAngka.h"
 
-int main(){
-    address nodeA, nodeB, nodeC, nodeD, nodeE, nodeF;
+int main()
+{
     List linkedList;
+    address nodeA, nodeB, nodeC, nodeD, nodeE, nodeF = nullptr;
+    infotype infoA, infoB, infoC, infoD, infoE, infoF;
     CreateList(linkedList);
 
-    nodeA = alokasi(infotype({angka: 8, Next:nullptr}));
-    nodeB = alokasi(infotype({angka: 13, Next:nullptr}));
-    nodeC = alokasi(infotype({angka: 18, Next:nullptr}));
-    nodeD = alokasi(infotype({angka: 25, Next:nullptr}));
-    nodeE = alokasi(infotype({angka: 33, Next:nullptr}));
-    nodeF = alokasi(infotype({angka: 40, Next:nullptr}));
+    infoA.angka = 8;
+    infoA.Next = nullptr;
+    nodeA = alokasi(infoA);
+    infoB.angka = 13;
+    nodeB = alokasi(infoB);
+    infoC.angka = 18;
+    nodeC = alokasi(infoC);
+    infoD.angka = 25;
+    nodeD = alokasi(infoD);
+    infoE.angka = 33;
+    nodeE = alokasi(infoE);
+    infoF.angka = 40;
+    nodeF = alokasi(infoF);
 
-    insertFirst(linkedList,nodeB);
+    insertFirst(linkedList, nodeB);
     insertLast(linkedList, nodeA);
-    insertAfter(linkedList,nodeD,nodeB);
-    insertFirst(linkedList,nodeC);
-    insertLast(linkedList,nodeE);
-    insertFirst(linkedList,nodeF);
-    delAfter(linkedList, nodeB, nodeC);
+    insertAfter(nodeD, nodeB);
+    insertFirst(linkedList, nodeC);
+    insertLast(linkedList, nodeE);
+    insertFirst(linkedList, nodeF);
+    delAfter(nodeB, nodeC);
     printList(linkedList);
-    
+
     return 0;
 }

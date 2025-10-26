@@ -7,13 +7,14 @@ void CreateList(List &L)
 
 address alokasi(infotype x)
 {
-    address newNode;
+    address newNode = new infotype();
     newNode->angka = x.angka;
     newNode->Next = nullptr;
     return newNode;
 }
 
-void dealokasi(address &node){
+void dealokasi(address &node)
+{
     node->Next = nullptr;
     delete node;
 }
@@ -26,7 +27,6 @@ void printList(List L)
         cout << temp->angka << " - ";
         temp = temp->Next;
     }
-    
 }
 
 void insertFirst(List &L, address nodeBaru)
@@ -42,7 +42,7 @@ void insertLast(List &L, address nodeBaru)
     {
         temp = temp->Next;
     }
-    
+
     temp->Next = nodeBaru;
 }
 
