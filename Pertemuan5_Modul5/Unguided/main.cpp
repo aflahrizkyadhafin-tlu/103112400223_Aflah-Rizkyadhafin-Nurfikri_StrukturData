@@ -30,5 +30,12 @@ int main()
     delAfter(nodeB, nodeC);
     printList(linkedList);
 
+    // Soal 1
+    updateFirst(linkedList);
+    updateAfter(nodeD);
+    updateLast(linkedList);
+    updateAfter(linkedList.First);
+    printList(linkedList);
+
     return 0;
 }

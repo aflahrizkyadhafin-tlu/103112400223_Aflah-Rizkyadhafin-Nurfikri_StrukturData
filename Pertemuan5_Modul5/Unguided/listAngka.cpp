@@ -27,6 +27,7 @@ void printList(List L)
         cout << temp->angka << " - ";
         temp = temp->Next;
     }
+    cout <<endl;
 }
 
 void insertFirst(List &L, address nodeBaru)
@@ -70,3 +71,38 @@ void delAfter(address &nodeHapus, address &nodePrev)
     nodePrev->Next = nodeHapus->Next;
     dealokasi(nodeHapus);
 }
+
+// Soal 1
+void updateFirst(List &L)
+{
+    dataAngka D;
+    cout << "Masukan update data node pertama : " << endl;
+    cout << "Masukan angka : ";
+    cin >> D;
+    L.First->angka = D;
+    cout << "Data berhasil di update!" <<endl<< endl;
+};
+
+void updateLast(List &L){
+    dataAngka D;
+    cout << "Masukan update data node terakhir : " << endl;
+    cout << "Masukan angka : ";
+    cin >> D;
+    address last = L.First;
+    while (last->Next != nullptr)
+    {
+        last = last->Next;
+    }
+    last->angka = D;
+    cout << "Data berhasil di update!" <<endl<< endl;
+};
+
+void updateAfter(address &nodePrev)
+{
+    dataAngka D;
+    cout << "Masukan update data setelah node " << nodePrev->angka << " : " << endl;
+    cout << "Masukan angka : ";
+    cin >> D;
+    nodePrev->Next->angka = D;
+    cout << "Data berhasil di update!" <<endl<< endl;
+};

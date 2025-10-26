@@ -25,4 +25,8 @@ void insertAfter(address &nodeBaru, address &nodePrev);
 int nbList(List L);
 void delAfter(address &nodeHapus, address &nodePrev);
 
+// Soal 1
+void updateFirst(List &L);
+void updateLast(List &L);
+void updateAfter(address &nodePrev);
 #endif
