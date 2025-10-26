@@ -593,11 +593,14 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided Preparation]()
+![Screenshot Output Unguided Preparation](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Pre-test.png)
 
 Kode ini merupakan tipe data abstract untuk mengerjakan soal unguided modul 5 Struktur Data.
 
-### 1.
+### 1.Buat Prosedur
+### Procedure updateFirst (input / outputL: List)
+### Procedure updatelast (input/outputL: List)
+### Procedure updateAfter (input / output L : List, input nodePrev : address )
 
 #### listAngka.h
 
@@ -800,11 +803,14 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1]()
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_1.png)
 
 Program ini memiliki tiga prosedur utama untuk mengubah data pada node dalam linked list, yaitu updateFirst, updateLast, dan updateAfter. Prosedur updateFirst mengubah nilai pada node pertama, updateLast memperbarui nilai pada node terakhir dengan melakukan penelusuran sampai akhir list, sementara updateAfter mengganti data pada node yang berada tepat setelah node tertentu. Ketiga prosedur ini bertujuan untuk memodifikasi isi data tanpa merubah hubungan antar node dalam linked list.
 
-### 2. Buatlah ADT pelajaran sebagai berikut di dalam file "pelajaran.h":
+### 2. Buat Prosedur
+### Procedure SearchByData(inputL: List, input data : integer)
+### Procedure SearchByAddress( input L : List, input node : address )
+### Procedure SearchByRange( input L : List, input nilaiMin : integer)
 
 #### listAngka.h
 
@@ -1085,7 +1091,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2]()
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_2.png)
 
 Tiga prosedur pencarian menggunakan parameter sebagai kunci untuk menemukan data dalam linked list, yaitu searchByData yang mencari node berdasarkan nilai data tertentu, searchByAddress yang mencari berdasarkan alamat node, dan searchByRange yang menampilkan semua node dengan nilai lebih besar dari batas yang ditentukan. Parameter pertama pada semua fungsi adalah list yang akan dijelajah, sedangkan parameter kedua menentukan kriteria pencarian. Ketiganya hanya membaca data tanpa mengubah struktur linked list.
 
@@ -1393,7 +1399,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 3]()
+![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_3.png)
 
 Prosedur aritmatika(List L) melakukan perhitungan operasi aritmatika dasar pada seluruh elemen dalam list. Prosedur ini menghitung total penjumlahan, pengurangan, dan perkalian dari semua nilai angka yang terdapat pada node-list. Namun, terdapat kesalahan logika pada operasi pengurangan karena nilai awal di-set sebagai elemen pertama lalu dikurangi setiap elemen (termasuk elemen pertama lagi), sehingga hasilnya tidak akurat untuk operasi pengurangan beruntun.
 
