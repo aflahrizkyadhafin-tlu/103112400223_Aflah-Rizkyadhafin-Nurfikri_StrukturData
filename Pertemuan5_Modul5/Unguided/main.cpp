@@ -18,7 +18,6 @@ int main(){
     insertFirst(linkedList,nodeC);
     insertLast(linkedList,nodeE);
     insertFirst(linkedList,nodeF);
-
     delAfter(linkedList, nodeB, nodeC);
     printList(linkedList);
     

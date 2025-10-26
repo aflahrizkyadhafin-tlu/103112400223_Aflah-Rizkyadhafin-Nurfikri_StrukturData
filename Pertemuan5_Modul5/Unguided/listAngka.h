@@ -21,8 +21,8 @@ void dealokasi(address &node);
 void printList(List L);
 void insertFirst(List &L, address nodeBaru);
 void insertLast(List &L, address nodeBaru);
-void insertAfter(List &L, address nodeBaru, address nodePrev);
+void insertAfter(address &nodeBaru, address &nodePrev);
 int nbList(List L);
-void delAfter(List &L, address nodeHapus, address nodePrev);
+void delAfter(address &nodeHapus, address &nodePrev);
 
 #endif
