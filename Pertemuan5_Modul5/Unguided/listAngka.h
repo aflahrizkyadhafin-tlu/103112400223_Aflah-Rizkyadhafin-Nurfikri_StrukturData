@@ -34,4 +34,7 @@ void updateAfter(address &nodePrev);
 void searchByData(List L, dataAngka data);
 void searchByAddress(List L, address node);
 void searchByRange(List L, int nilaiMin);
+
+// Soal 3
+void aritmatika(List L);
 #endif

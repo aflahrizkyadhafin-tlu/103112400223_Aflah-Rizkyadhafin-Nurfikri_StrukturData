@@ -161,4 +161,22 @@ void searchByRange(List L, int nilaiMin) {
     if (!findData){
         cout << "Node dengan data lebih besar dari " << nilaiMin << " tidak ditemukan pada list " << endl;
     }
+}
+
+// Soal 3
+void aritmatika(List L) {
+    int penjumlahan = 0, pengurangan = L.First->angka, perkalian = 1;
+    address temp = L.First;
+
+    while (temp != nullptr)
+    {
+        pengurangan-=temp->angka;
+        penjumlahan+=temp->angka;
+        perkalian*=temp->angka;
+        temp = temp->Next;
+    }
+
+    cout << "Total penjumlahan : " << penjumlahan <<endl;
+    cout << "Total pengurangan : " << pengurangan <<endl;
+    cout << "Total perkalian : " << perkalian <<endl;
 };
