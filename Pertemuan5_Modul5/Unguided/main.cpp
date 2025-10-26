@@ -8,7 +8,6 @@ int main()
     CreateList(linkedList);
 
     infoA.angka = 8;
-    infoA.Next = nullptr;
     nodeA = alokasi(infoA);
     infoB.angka = 13;
     nodeB = alokasi(infoB);
