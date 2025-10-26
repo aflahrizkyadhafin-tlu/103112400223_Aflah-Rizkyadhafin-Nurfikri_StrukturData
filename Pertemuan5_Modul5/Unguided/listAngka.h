@@ -29,4 +29,9 @@ void delAfter(address &nodeHapus, address &nodePrev);
 void updateFirst(List &L);
 void updateLast(List &L);
 void updateAfter(address &nodePrev);
+
+// Soal 2
+void searchByData(List L, dataAngka data);
+void searchByAddress(List L, address node);
+void searchByRange(List L, int nilaiMin);
 #endif

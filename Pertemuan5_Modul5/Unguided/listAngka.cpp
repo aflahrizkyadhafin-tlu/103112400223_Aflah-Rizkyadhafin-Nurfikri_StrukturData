@@ -105,4 +105,60 @@ void updateAfter(address &nodePrev)
     cin >> D;
     nodePrev->Next->angka = D;
     cout << "Data berhasil di update!" <<endl<< endl;
+}
+
+// Soal 2
+void searchByData(List L, dataAngka data) {
+    bool findData = false;
+    int indxFind = 1;
+    address temp = L.First;
+
+    while (temp != nullptr)
+    {
+        if (temp->angka == data){
+            findData = true;
+            cout << "Node dengan data " << data << " ditemukan pada posisi ke-" << indxFind <<endl;
+        }
+        indxFind++;
+        temp = temp->Next;
+    }
+    if (!findData){
+        cout << "Node dengan data " << data << " tidak ditemukan pada list " << endl;
+    }
+}
+
+void searchByAddress(List L, address A) {
+    bool findData = false;
+    address temp = L.First;
+
+    while (temp != nullptr)
+    {
+        if (temp == A){
+            findData = true;
+            cout << "Node dengan alamat " << A << " ditemukan pada list ini"<<endl;
+        }
+        temp = temp->Next;
+    }
+    if (!findData){
+        cout << "Node dengan alamat " << A << " tidak ditemukan pada list " << endl;
+    }
+}
+
+void searchByRange(List L, int nilaiMin) {
+    bool findData = false;
+    int indxFind = 1;
+    address temp = L.First;
+
+    while (temp != nullptr)
+    {
+        if (temp->angka > nilaiMin){
+            findData = true;
+            cout << "Data ditemukan pada posisi ke-" << indxFind << ", nilai : "<< temp->angka << endl;
+        }
+        indxFind++;
+        temp = temp->Next;
+    }
+    if (!findData){
+        cout << "Node dengan data lebih besar dari " << nilaiMin << " tidak ditemukan pada list " << endl;
+    }
 };

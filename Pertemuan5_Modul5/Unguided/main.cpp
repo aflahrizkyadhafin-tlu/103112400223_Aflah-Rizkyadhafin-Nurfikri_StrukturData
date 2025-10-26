@@ -3,7 +3,7 @@
 int main()
 {
     List linkedList;
-    address nodeA, nodeB, nodeC, nodeD, nodeE, nodeF = nullptr;
+    address nodeA, nodeB, nodeC, nodeD, nodeE, nodeF,nodeG = nullptr;
     infotype infoA, infoB, infoC, infoD, infoE, infoF;
     CreateList(linkedList);
 
@@ -20,6 +20,7 @@ int main()
     nodeE = alokasi(infoE);
     infoF.angka = 40;
     nodeF = alokasi(infoF);
+    nodeG = alokasi(infotype());
 
     insertFirst(linkedList, nodeB);
     insertLast(linkedList, nodeA);
@@ -31,11 +32,28 @@ int main()
     printList(linkedList);
 
     // Soal 1
-    updateFirst(linkedList);
-    updateAfter(nodeD);
-    updateLast(linkedList);
-    updateAfter(linkedList.First);
-    printList(linkedList);
+    // updateFirst(linkedList);
+    // updateAfter(nodeD);
+    // updateLast(linkedList);
+    // updateAfter(linkedList.First);
+    // printList(linkedList);
+
+    // Soal 2
+    searchByData(linkedList, 18);
+    searchByData(linkedList, 99);
+    cout << endl;
+
+    searchByAddress(linkedList, nodeA);
+    searchByAddress(linkedList, nodeG);
+    cout << endl;
+
+    cout << "================ Data diatas 20 ================" << endl;
+    searchByRange(linkedList, 20);
+    cout << endl;
+    
+    cout << "================ Data diatas 50 ================" << endl;
+    searchByRange(linkedList, 50);
+    cout << endl;
 
     return 0;
 }
