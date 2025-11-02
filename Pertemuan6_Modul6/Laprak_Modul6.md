@@ -1232,7 +1232,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_1.png)
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan6_Modul6/Unguided/screenshot/unguided_1.png)
 
 Program ini merupakan implementasi dari abstract data type (ADT) doubly linked list untuk mengelola data kendaraan yang terdiri dari nomor polisi, warna, dan tahun pembuatan. Program menyediakan operasi dasar seperti pembuatan list, alokasi node, penyisipan di akhir list, serta pencetakan informasi seluruh data kendaraan. Pada fungsi main, program menerima input data kendaraan dari pengguna untuk empat node yang kemudian disimpan dan ditampilkan kembali menggunakan struktur doubly linked list.
 
@@ -1465,7 +1465,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_2.png)
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan6_Modul6/Unguided/screenshot/unguided_2.png)
 
 Program ini merupakan lanjutan dari program sebelumnya yang telah ditambahkan fungsi findElm untuk mencari data kendaraan berdasarkan nomor polisi dan fungsi printInfoAddress untuk menampilkan informasi kendaraan dari alamat node tertentu. Fungsi findElm melakukan pencarian secara linear dalam doubly linked list dan mengembalikan alamat node jika ditemukan, sedangkan printInfoAddress menampilkan detail kendaraan dari node yang ditunjuk oleh parameter alamat.
 
@@ -1775,7 +1775,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_3.png)
+![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan6_Modul6/Unguided/screenshot/unguided_3.png)
 
 Prosedur delete (deleteFirst, deleteLast, deleteAfter) berfungsi untuk menghapus elemen dari list dengan menjaga integritas hubungan pointer prev dan next. Setiap operasi delete akan melepas memori elemen yang dihapus menggunakan prosedur dealokasi.
 
