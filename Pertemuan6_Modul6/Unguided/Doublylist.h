@@ -36,4 +36,9 @@ void insertLast(List &L, address P);
 
 // Soal 2
 address findElm(List L, string x);
+
+// Soal 3
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void deleteAfter(address &prec, address &P);
 #endif

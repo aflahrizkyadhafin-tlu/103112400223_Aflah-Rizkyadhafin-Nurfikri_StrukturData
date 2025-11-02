@@ -1,4 +1,5 @@
 #include "Doublylist.h"
+#include <iomanip>
 
 void CreateList(List &L)
 {
@@ -46,15 +47,27 @@ void printInfo(List L)
     {
         address temp = L.First;
 
-        cout << "DATA LIST 1" << endl
+        cout << "-------------- DATA LIST ---------------" << endl
              << endl;
+
+        cout << string(40, '-') << endl
+             << left
+             << setw(15) << "No. Polisi"
+             << setw(15) << "Warna"
+             << setw(10) << "Tahun"
+             << endl
+             << string(40, '-') << endl;
+
         while (temp != Nil)
         {
-            cout << "No. Polisi : " << temp->info.nopol << endl;
-            cout << "Warna : " << temp->info.warna << endl;
-            cout << "Tahun : " << temp->info.thnBuat << endl;
+            cout << left
+                 << setw(15) << temp->info.nopol
+                 << setw(15) << temp->info.warna
+                 << setw(10) << temp->info.thnBuat
+                 << endl;
             temp = temp->next;
         }
+        cout << string(40, '-') << endl;
     }
 }
 
@@ -74,12 +87,21 @@ void insertLast(List &L, address P)
     }
     else
     {
-        L.Last->next = P;
-        P->prev = L.Last;
-        L.Last = P;
+        if (findElm(L, P->info.nopol) != Nil)
+        {
+            cout << "Nomor polisi sudah terdaftar" << endl;
+        }
+        else
+        {
+            L.Last->next = P;
+            P->prev = L.Last;
+            L.Last = P;
+        }
     }
+    cout << endl;
 }
 
+// Soal 2
 address findElm(List L, string x)
 {
     address temp = L.First;
@@ -93,6 +115,56 @@ address findElm(List L, string x)
         temp = temp->next;
     }
 
-    cout << "Data kendaraan dengan nomor polisi " << x << " tidak ditemukan" << endl;
     return Nil;
+}
+
+// Soal 3
+void deleteFirst(List &L, address &P)
+{
+    if (isEmpty(L))
+    {
+        cout << "Tidak ada kendaraan yang terdaftar" << endl;
+    }
+    else
+    {
+        if (findElm(L, P->info.nopol) == Nil)
+        {
+            cout << "Nomor polisi tidak terdaftar" << endl;
+        }
+        else
+        {
+            L.First->next->prev = Nil;
+            L.First = L.First->next;
+            dealokasi(P);
+        }
+    }
+}
+
+void deleteLast(List &L, address &P)
+{
+    if (isEmpty(L))
+    {
+        cout << "Tidak ada kendaraan yang terdaftar" << endl;
+    }
+    else
+    {
+        if (findElm(L, P->info.nopol) == Nil)
+        {
+            cout << "Nomor polisi tidak terdaftar" << endl;
+        }
+        else
+        {
+            L.Last->prev->next = Nil;
+            L.Last = L.Last->prev;
+            dealokasi(P);
+        }
+    }
+}
+
+void deleteAfter(address &prec, address &P)
+{
+    P = prec->next;
+    prec->next = prec->next->next;
+    prec->next->prev = prec;
+    dealokasi(P);
 }
