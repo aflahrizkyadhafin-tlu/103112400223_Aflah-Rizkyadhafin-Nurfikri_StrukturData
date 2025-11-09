@@ -448,7 +448,7 @@ Program ini menguji operasi dasar Stack: push, pop, dan balikStack. Setelah bebe
 
 ##### Output 1
 
-![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan6_Modul6/Unguided/screenshot/unguided_1.png)
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan7_Modul7/Unguided/screenshot/unguided_3.png)
 
 #### Unguided 2
 
@@ -458,7 +458,7 @@ Bagian ini menguji fungsi khusus pushAscending yang memastikan elemen di dalam S
 
 ##### Output 2
 
-![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan6_Modul6/Unguided/screenshot/unguided_1.png)
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan7_Modul7/Unguided/screenshot/unguided_2.png)
 
 #### Unguided 3
 
@@ -468,7 +468,7 @@ Program ini menguji fungsi getInputStream yang membaca input dari stream karakte
 
 ##### Output 3
 
-![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan6_Modul6/Unguided/screenshot/unguided_1.png)
+![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan7_Modul7/Unguided/screenshot/unguided_3.png)
 
 ## Kesimpulan
 
