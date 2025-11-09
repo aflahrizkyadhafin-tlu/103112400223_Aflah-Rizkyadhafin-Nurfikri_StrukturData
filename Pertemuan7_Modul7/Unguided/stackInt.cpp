@@ -11,7 +11,6 @@ void push(Stack &S, infotype x)
     {
         S.top++;
         S.info[S.top] = x;
-        cout << "Nilai " << x << " berhasil di input pada index ke-" << S.top << endl;
     }
     else
     {
@@ -40,9 +39,11 @@ void printInfo(Stack &S)
 {
     int n = S.top;
 
+    cout << "[top] ";
+
     while (n > -1)
     {
-        cout << S.info[n];
+        cout << S.info[n] << " ";
         n--;
     }
     cout << endl;
@@ -66,27 +67,24 @@ void balikStack(Stack &S)
 // Soal 2
 void pushAscending(Stack &S, infotype x)
 {
-    infotype temp, n = S.top;
-    Stack urutanAngka;
-    createStack(urutanAngka);
-    while (n > -1)
+    Stack temp;
+    createStack(temp);
+
+    while (S.top != -1 && S.info[S.top] > x)
     {
-        if (S.info[n] > x)
-        {
-            push(urutanAngka, S.info[n]);
-        }
-        else if (x != NULL)
-        {
-            push(urutanAngka, x);
-            x = NULL;
-        }
-        else
-        {
-            push(urutanAngka, S.info[n]);
-        }
-        n--;
+        infotype valueToMove = S.info[S.top];
+        push(temp, valueToMove);
+        pop(S);
     }
-    S = urutanAngka;
+
+    push(S, x);
+
+    while (temp.top != -1)
+    {
+        infotype valueToReturn = temp.info[temp.top];
+        push(S, valueToReturn);
+        pop(temp);
+    }
 }
 
 // Soal 3
