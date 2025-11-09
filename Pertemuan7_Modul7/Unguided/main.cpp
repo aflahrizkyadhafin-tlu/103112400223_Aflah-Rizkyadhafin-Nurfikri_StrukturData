@@ -2,17 +2,13 @@
 
 int main()
 {
-    Stack arrAngka;
-    createStack(arrAngka);
-
-    cout << "========= PUSH STACK =========" << endl;
-    push(arrAngka, 1);
-    push(arrAngka, 2);
-    push(arrAngka, 3);
-    push(arrAngka, 4);
-    printInfo(arrAngka);
-    cout << "========= BALIK STACK =========" << endl;
-    balikStack(arrAngka);
-    printInfo(arrAngka);
+    cout << "Hello world!" << endl;
+    Stack S;
+    createStack(S);
+    getInputStream(S);
+    printInfo(S);
+    cout << "balik stack" << endl;
+    balikStack(S);
+    printInfo(S);
     return 0;
 }

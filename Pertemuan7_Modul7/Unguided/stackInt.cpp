@@ -62,3 +62,43 @@ void balikStack(Stack &S)
     }
     S = temp;
 }
+
+// Soal 2
+void pushAscending(Stack &S, infotype x)
+{
+    infotype temp, n = S.top;
+    Stack urutanAngka;
+    createStack(urutanAngka);
+    while (n > -1)
+    {
+        if (S.info[n] > x)
+        {
+            push(urutanAngka, S.info[n]);
+        }
+        else if (x != NULL)
+        {
+            push(urutanAngka, x);
+            x = NULL;
+        }
+        else
+        {
+            push(urutanAngka, S.info[n]);
+        }
+        n--;
+    }
+    S = urutanAngka;
+}
+
+// Soal 3
+void getInputStream(Stack &S)
+{
+    char checkenter;
+    while (true)
+    {
+        cin.get(checkenter);
+        if (checkenter == '\n')
+            break;
+        cout << checkenter << endl;
+        push(S, checkenter - '0');
+    }
+}

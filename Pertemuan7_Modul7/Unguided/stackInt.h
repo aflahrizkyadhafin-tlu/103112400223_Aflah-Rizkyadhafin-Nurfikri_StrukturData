@@ -16,4 +16,9 @@ infotype pop(Stack &S);
 void printInfo(Stack &S);
 void balikStack(Stack &S);
 
+// Soal 2
+void pushAscending(Stack &S, infotype x);
+
+// Soal 3
+void getInputStream(Stack &S);
 #endif
