@@ -578,7 +578,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Pre-test.png)
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan8_Modul8/Unguided/screenshot/soal_1.png)
 
 Kode ini merupakan implementasi Queue menggunakan C++ dengan metode Head bergerak dan Tail diam.
 
@@ -723,7 +723,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_2.png)
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan8_Modul8/Unguided/screenshot/soal_2.png)
 
 Kode ini merupakan implementasi Queue menggunakan C++ dengan metode Head diam dan Tail bergerak.
 
@@ -884,7 +884,7 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan5_Modul5/Unguided/screenshot/Soal_3.png)
+![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan8_Modul8/Unguided/screenshot/soal_3.png)
 
 Prosedur aritmatikaKode ini merupakan implementasi Queue menggunakan C++ dengan metode Head bergerak dan Tail bergerak. Head dan Tail akan terus berotasi jika mencapai index maksimal array.
 
