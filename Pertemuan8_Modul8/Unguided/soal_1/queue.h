@@ -4,16 +4,16 @@
 using namespace std;
 
 typedef int infotype;
-struct Queue {
+struct Queue
+{
     int info[5], head, tail;
 };
 
-void CreaeteQueue(Queue &Q);
+void CreateQueue(Queue &Q);
 bool isEmptyQueue(Queue Q);
 bool isFullQueue(Queue Q);
 void enqueue(Queue &Q, infotype x);
 infotype dequeue(Queue &Q);
 void printInfo(Queue Q);
-
 
 #endif
