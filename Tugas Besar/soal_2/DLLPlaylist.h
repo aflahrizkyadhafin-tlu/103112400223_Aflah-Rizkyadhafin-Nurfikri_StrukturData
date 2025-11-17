@@ -35,7 +35,9 @@ void insertBefore(List &L, address &Q, Song S);
 void deleteFirst(List &L, Song S);
 void deleteLast(List &L, Song S);
 void deleteAfter(List &L, address &Q, Song S);
+void deleteBefore(List &L, address &Q, Song S);
 void updateAtPosition(List &L, int posisi);
+void updateBefore(List &L, address &Q);
 void viewList(List L);
 void searchByPopularityRange(List L, float minPrice, float maxPrice);
 
