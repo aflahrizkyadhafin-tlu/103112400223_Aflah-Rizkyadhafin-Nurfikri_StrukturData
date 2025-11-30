@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 9 - Tree</h1>
+# <h1 align="center">Laporan Praktikum Modul 10 - Tree</h1>
 
 <p align="center">Aflah Rizkyadhafin Nurfikri - 103112400223</p>
 
