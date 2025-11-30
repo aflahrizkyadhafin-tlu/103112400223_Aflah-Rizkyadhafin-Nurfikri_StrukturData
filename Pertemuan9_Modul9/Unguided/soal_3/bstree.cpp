@@ -53,19 +53,24 @@ address findNode(address root, infotype x)
     }
 }
 
-void printInOrder(address root)
+void printPreOrder(address root)
 {
     if (root == Nil)
     {
         return;
     }
-    printInOrder(root->left);
     cout << root->info << " - ";
-    printInOrder(root->right);
+    printPreOrder(root->left);
+    printPreOrder(root->right);
 }
 
-void printPreOrder(address root)
+void printPostOrder(address root)
 {
+    if (root == Nil)
+    {
+        return;
+    }
+    printPostOrder(root->left);
+    printPostOrder(root->right);
+    cout << root->info << " - ";
 }
-
-void printPostOrder(address root) {}

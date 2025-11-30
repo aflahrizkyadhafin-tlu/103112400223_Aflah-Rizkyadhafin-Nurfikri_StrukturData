@@ -15,7 +15,6 @@ struct Node
 address alokasi(infotype x);
 void insertNode(address &root, infotype x);
 address findNode(address root, infotype x);
-void printInOrder(address root);
 
 // Soal 3
 void printPreOrder(address root);
