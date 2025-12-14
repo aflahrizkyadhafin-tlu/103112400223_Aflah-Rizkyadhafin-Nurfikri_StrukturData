@@ -415,95 +415,770 @@ Program ini adalah implementasi lengkap dari Graf dalam C++.
 
 ## Unguided
 
-### 1. Buatlah ADT Multi Linked List sebagai berikut didalam file “MultiLL.h” :
+### 1. Buatlah ADT Graph tidak berarah file “graph.h”: :
 ```h
-
+Type infoGraph: char
+Type adrNode : pointer to ElmNode
+Type adrEdge : pointer to ElmNode
+Type ElmNode <
+    info : infoGraph
+    visited : integer
+    firstEdge : adrEdge
+    Next : adrNode
+>
+    Type ElmEdge <
+    Node : adrNode
+    Next : adrEdge
+>
+Type Graph <
+    first : adrNode
+>
+procedure CreateGraph (input/output G : Graph)
+procedure InsertNode (input/output G : Graph,
+input X : infotype)
+procedure ConnectNode (input/output N1, N2 : adrNode)
+procedure PrintInfoGraph (input G : Graph)
 ```
 
-#### MultiLL.h
+#### graphLat.h
 
 ```h
+#ifndef GRAPHLAT_H
+#define GRAPHLAT_H
+#define Nil NULL
+#include <iostream>
+using namespace std;
 
+typedef char infoGraph;
+typedef struct ElmNode *adrNode;
+typedef struct ElmEdge *adrEdge;
+
+struct ElmNode
+{
+    infoGraph info;
+    int visited;
+    adrEdge firstEdge;
+    adrNode Next;
+};
+
+struct ElmEdge
+{
+    adrNode Node;
+    adrEdge Next;
+};
+
+struct Graph
+{
+    adrNode first;
+};
+
+void CreateGraph(Graph &G);
+void InsertNode(Graph &G, infoGraph X);
+void ConnectNode(adrNode &N1, adrNode &N2);
+void PrintInfoGraph(Graph G);
+
+// Fungsi bantu
+adrNode AlokasiNode(infoGraph X);
+adrEdge AlokasiEdge(adrNode N);
+adrNode FindNode(Graph G, infoGraph X);
+#endif
 ```
 
-#### MultiLL.cpp
+#### graphLat.cpp
 
 ```C++
+#include "graphLat.h"
+
+void CreateGraph(Graph &G)
+{
+    G.first = Nil;
+}
+
+void InsertNode(Graph &G, infoGraph X)
+{
+    adrNode newNode = AlokasiNode(X);
+
+    if (G.first == Nil)
+    {
+        G.first = newNode;
+    }
+    else
+    {
+        adrNode temp = G.first;
+        while (temp->Next != Nil)
+        {
+            temp = temp->Next;
+        }
+
+        temp->Next = newNode;
+    }
+}
+
+void ConnectNode(adrNode &N1, adrNode &N2)
+{
+    if (N1 != NULL && N2 != NULL)
+    {
+        adrEdge Edge1 = AlokasiEdge(N2);
+        Edge1->Next = N1->firstEdge;
+        N1->firstEdge = Edge1;
+
+        adrEdge Edge2 = AlokasiEdge(N1);
+        Edge2->Next = N2->firstEdge;
+        N2->firstEdge = Edge2;
+    }
+    else
+    {
+        cout << "Node tidak ditemukan!" << endl;
+    }
+}
+
+void PrintInfoGraph(Graph G)
+{
+    adrNode nodeBantu = G.first;
+    while (nodeBantu != NULL)
+    {
+        cout << "Node " << nodeBantu->info << " terhubung ke: ";
+        adrEdge edgeBantu = nodeBantu->firstEdge;
+        while (edgeBantu != NULL)
+        {
+            cout << edgeBantu->Node->info << " "; // Akses info dari node tujuan
+            edgeBantu = edgeBantu->Next;
+        }
+        cout << endl;
+        nodeBantu = nodeBantu->Next;
+    }
+}
+
+// Fungsi bantu
+adrNode AlokasiNode(infoGraph X)
+{
+    adrNode newNode = new ElmNode;
+    newNode->firstEdge = Nil;
+    newNode->Next = Nil;
+    newNode->visited = 0;
+    newNode->info = X;
+    return newNode;
+}
+
+adrEdge AlokasiEdge(adrNode N)
+{
+    adrEdge newEdge = new ElmEdge;
+    newEdge->Next = Nil;
+    newEdge->Node = N;
+    return newEdge;
+}
+
+adrNode FindNode(Graph G, infoGraph X)
+{
+    adrNode temp = G.first;
+    while (temp != Nil && temp->info != X)
+    {
+        temp = temp->Next;
+    }
+    return temp;
+}
 
 ```
 
 #### main.cpp
 
 ```C++
+#include "graphLat.h"
 
+int main()
+{
+     Graph G;
+     CreateGraph(G);
+
+     InsertNode(G, 'A');
+     InsertNode(G, 'B');
+     InsertNode(G, 'C');
+     InsertNode(G, 'D');
+     InsertNode(G, 'E');
+     InsertNode(G, 'F');
+     InsertNode(G, 'G');
+     InsertNode(G, 'H');
+
+     adrNode NodeA = FindNode(G, 'A');
+     adrNode NodeB = FindNode(G, 'B');
+     adrNode NodeC = FindNode(G, 'C');
+     adrNode NodeD = FindNode(G, 'D');
+     adrNode NodeE = FindNode(G, 'E');
+     adrNode NodeF = FindNode(G, 'F');
+     adrNode NodeG = FindNode(G, 'G');
+     adrNode NodeH = FindNode(G, 'H');
+
+     ConnectNode(NodeA, NodeB);
+     ConnectNode(NodeA, NodeC);
+     ConnectNode(NodeB, NodeD);
+     ConnectNode(NodeB, NodeE);
+     ConnectNode(NodeC, NodeF);
+     ConnectNode(NodeC, NodeG);
+     ConnectNode(NodeD, NodeH);
+     ConnectNode(NodeE, NodeH);
+     ConnectNode(NodeF, NodeH);
+     ConnectNode(NodeG, NodeH);
+
+     cout << "==== PRINT INFO GRAPH ====" << endl;
+     PrintInfoGraph(G);
+     return 0;
+}
 ```
 ### Output Unguided 1 :
 
 ##### Output 1
 
-![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan13_Modul13/Unguided/screenshot/soal_1.png)
+![Screenshot Output Unguided 1](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan14_Modul14/Unguided/screenshot/soal_1.png)
 
-Kode ini merupakan kode untuk menyimpan node dengan menggunakan MLL. Pada bagian ini program sudah bisa membuat list kosong, menambahkan data parent baru, menambahkan data child serta menghapus data parent/child.
+Program ini mengimplementasikan struktur data graf tidak berarah (undirected graph) menggunakan representasi adjacency list dalam bahasa C++, yang mencakup operasi dasar seperti pembuatan graf, penambahan node, dan penghubungan antar node. 
 
-### 2. Tambahkan prosedur searchHewanByEkor(input/output LParent : listParent, input tail : Boolean) yang digunakan untuk melakukan operasi SEARCHING hewan-hewan yang memiliki EKOR FALSE (pencarian dilakukan dengan menelusuri list child yang ada pada masing-masing node parent). Kemudian panggil prosedur tersebut pada main.cpp. Ekspektasi output :
+### 2. Buatlah prosedur untuk menampilkanhasil penelusuran DFS.
 
-#### MultiLL.h
+#### graphLat.h
 
 ```h
+#ifndef GRAPHLAT_H
+#define GRAPHLAT_H
+#define Nil NULL
+#include <iostream>
+#include <stack>
+using namespace std;
 
+typedef char infoGraph;
+typedef struct ElmNode *adrNode;
+typedef struct ElmEdge *adrEdge;
+
+struct ElmNode
+{
+    infoGraph info;
+    int visited;
+    adrEdge firstEdge;
+    adrNode Next;
+};
+
+struct ElmEdge
+{
+    adrNode Node;
+    adrEdge Next;
+};
+
+struct Graph
+{
+    adrNode first;
+};
+
+void CreateGraph(Graph &G);
+void InsertNode(Graph &G, infoGraph X);
+void ConnectNode(adrNode &N1, adrNode &N2);
+void PrintInfoGraph(Graph G);
+
+// Nomor 2
+void PrintDFS(Graph G, adrNode N);
 ```
 
-#### MultiLL.cpp
+#### graphLat.cpp
 
 ```C++
+#include "graphLat.h"
+
+void CreateGraph(Graph &G)
+{
+    G.first = Nil;
+}
+
+void InsertNode(Graph &G, infoGraph X)
+{
+    adrNode newNode = AlokasiNode(X);
+
+    if (G.first == Nil)
+    {
+        G.first = newNode;
+    }
+    else
+    {
+        adrNode temp = G.first;
+        while (temp->Next != Nil)
+        {
+            temp = temp->Next;
+        }
+
+        temp->Next = newNode;
+    }
+}
+
+void ConnectNode(adrNode &N1, adrNode &N2)
+{
+    if (N1 != NULL && N2 != NULL)
+    {
+        adrEdge Edge1 = AlokasiEdge(N2);
+        Edge1->Next = N1->firstEdge;
+        N1->firstEdge = Edge1;
+
+        adrEdge Edge2 = AlokasiEdge(N1);
+        Edge2->Next = N2->firstEdge;
+        N2->firstEdge = Edge2;
+    }
+    else
+    {
+        cout << "Node tidak ditemukan!" << endl;
+    }
+}
+
+void PrintInfoGraph(Graph G)
+{
+    adrNode nodeBantu = G.first;
+    while (nodeBantu != NULL)
+    {
+        cout << "Node " << nodeBantu->info << " terhubung ke: ";
+        adrEdge edgeBantu = nodeBantu->firstEdge;
+        while (edgeBantu != NULL)
+        {
+            cout << edgeBantu->Node->info << " "; // Akses info dari node tujuan
+            edgeBantu = edgeBantu->Next;
+        }
+        cout << endl;
+        nodeBantu = nodeBantu->Next;
+    }
+}
+
+// Soal 2
+void PrintDFS(Graph G, adrNode N)
+{
+    adrNode nodeReset = G.first;
+    while (nodeReset != NULL)
+    {
+        nodeReset->visited = 0;
+        nodeReset = nodeReset->Next;
+    }
+
+    adrNode StartNode = N;
+
+    if (StartNode == NULL)
+        return;
+
+    stack<adrNode> Stak;
+
+    Stak.push(StartNode);
+
+    cout << "DFS Traversal: ";
+    while (!Stak.empty())
+    {
+        adrNode nodeBantu = Stak.top();
+        Stak.pop();
+
+        if (nodeBantu->visited == 0)
+        {
+            nodeBantu->visited = 1;
+            cout << nodeBantu->info << " - ";
+
+            // masukkan tetangga ke stack
+            adrEdge edgeBantu = nodeBantu->firstEdge;
+            while (edgeBantu != NULL)
+            {
+                if (edgeBantu->Node->visited == 0)
+                {
+                    Stak.push(edgeBantu->Node);
+                }
+                edgeBantu = edgeBantu->Next;
+            }
+        }
+    }
+    cout << endl;
+}
+
+// Fungsi bantu
+adrNode AlokasiNode(infoGraph X)
+{
+    adrNode newNode = new ElmNode;
+    newNode->firstEdge = Nil;
+    newNode->Next = Nil;
+    newNode->visited = 0;
+    newNode->info = X;
+    return newNode;
+}
+
+adrEdge AlokasiEdge(adrNode N)
+{
+    adrEdge newEdge = new ElmEdge;
+    newEdge->Next = Nil;
+    newEdge->Node = N;
+    return newEdge;
+}
+
+adrNode FindNode(Graph G, infoGraph X)
+{
+    adrNode temp = G.first;
+    while (temp != Nil && temp->info != X)
+    {
+        temp = temp->Next;
+    }
+    return temp;
+}
 
 ```
 
 #### main.cpp
 
 ```C++
+#include "graphLat.h"
 
+int main()
+{
+     Graph G;
+     CreateGraph(G);
+
+     InsertNode(G, 'A');
+     InsertNode(G, 'B');
+     InsertNode(G, 'C');
+     InsertNode(G, 'D');
+     InsertNode(G, 'E');
+     InsertNode(G, 'F');
+     InsertNode(G, 'G');
+     InsertNode(G, 'H');
+
+     adrNode NodeA = FindNode(G, 'A');
+     adrNode NodeB = FindNode(G, 'B');
+     adrNode NodeC = FindNode(G, 'C');
+     adrNode NodeD = FindNode(G, 'D');
+     adrNode NodeE = FindNode(G, 'E');
+     adrNode NodeF = FindNode(G, 'F');
+     adrNode NodeG = FindNode(G, 'G');
+     adrNode NodeH = FindNode(G, 'H');
+
+     ConnectNode(NodeA, NodeB);
+     ConnectNode(NodeA, NodeC);
+     ConnectNode(NodeB, NodeD);
+     ConnectNode(NodeB, NodeE);
+     ConnectNode(NodeC, NodeF);
+     ConnectNode(NodeC, NodeG);
+     ConnectNode(NodeD, NodeH);
+     ConnectNode(NodeE, NodeH);
+     ConnectNode(NodeF, NodeH);
+     ConnectNode(NodeG, NodeH);
+
+     cout << "==== PRINT INFO GRAPH ====" << endl;
+     PrintInfoGraph(G);
+
+     // Soal 2
+     cout << endl
+          << "==== PRINT DFS ====" << endl;
+     PrintDFS(G, NodeE);
+     return 0;
+}
 ```
 
 ### Output Unguided 2 :
 
 ##### Output 1
 
-![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan13_Modul13/Unguided/screenshot/soal_2.png)
+![Screenshot Output Unguided 2](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan14_Modul14/Unguided/screenshot/soal_2.png)
 
-Pada bagian kedua ini, ditambahkan fungsi searcHewanByEkor yang berfungsi untuk mencari informasi hewan yang memiliki/tidak memiliki ekor dari setiap Node Parent.
+Pada bagian kedua ini, program menyediakan algoritma penelusuran graf yaitu DFS (Depth-First Search) menggunakan stack.
 
 ### 3. Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme queue Alternatif 3 (head dan tail berputar).
 
-#### MultiLL.h
+#### graphLat.h
 
 ```h
+#ifndef GRAPHLAT_H
+#define GRAPHLAT_H
+#define Nil NULL
+#include <iostream>
+#include <stack>
+#include <queue>
+using namespace std;
 
+typedef char infoGraph;
+typedef struct ElmNode *adrNode;
+typedef struct ElmEdge *adrEdge;
+
+struct ElmNode
+{
+    infoGraph info;
+    int visited;
+    adrEdge firstEdge;
+    adrNode Next;
+};
+
+struct ElmEdge
+{
+    adrNode Node;
+    adrEdge Next;
+};
+
+struct Graph
+{
+    adrNode first;
+};
+
+void CreateGraph(Graph &G);
+void InsertNode(Graph &G, infoGraph X);
+void ConnectNode(adrNode &N1, adrNode &N2);
+void PrintInfoGraph(Graph G);
+
+// Nomor 2
+void PrintDFS(Graph G, adrNode N);
+
+// Nomor 3
+void PrintBFS(Graph G, adrNode N);
+
+// Fungsi bantu
+adrNode AlokasiNode(infoGraph X);
+adrEdge AlokasiEdge(adrNode N);
+adrNode FindNode(Graph G, infoGraph X);
+#endif
 ```
 
-#### MultiLL.cpp
+#### graphLat.cpp
 
 ```C++
+#include "graphLat.h"
+
+void CreateGraph(Graph &G)
+{
+    G.first = Nil;
+}
+
+void InsertNode(Graph &G, infoGraph X)
+{
+    adrNode newNode = AlokasiNode(X);
+
+    if (G.first == Nil)
+    {
+        G.first = newNode;
+    }
+    else
+    {
+        adrNode temp = G.first;
+        while (temp->Next != Nil)
+        {
+            temp = temp->Next;
+        }
+
+        temp->Next = newNode;
+    }
+}
+
+void ConnectNode(adrNode &N1, adrNode &N2)
+{
+    if (N1 != NULL && N2 != NULL)
+    {
+        adrEdge Edge1 = AlokasiEdge(N2);
+        Edge1->Next = N1->firstEdge;
+        N1->firstEdge = Edge1;
+
+        adrEdge Edge2 = AlokasiEdge(N1);
+        Edge2->Next = N2->firstEdge;
+        N2->firstEdge = Edge2;
+    }
+    else
+    {
+        cout << "Node tidak ditemukan!" << endl;
+    }
+}
+
+void PrintInfoGraph(Graph G)
+{
+    adrNode nodeBantu = G.first;
+    while (nodeBantu != NULL)
+    {
+        cout << "Node " << nodeBantu->info << " terhubung ke: ";
+        adrEdge edgeBantu = nodeBantu->firstEdge;
+        while (edgeBantu != NULL)
+        {
+            cout << edgeBantu->Node->info << " "; // Akses info dari node tujuan
+            edgeBantu = edgeBantu->Next;
+        }
+        cout << endl;
+        nodeBantu = nodeBantu->Next;
+    }
+}
+
+// Soal 2
+void PrintDFS(Graph G, adrNode N)
+{
+    adrNode nodeReset = G.first;
+    while (nodeReset != NULL)
+    {
+        nodeReset->visited = 0;
+        nodeReset = nodeReset->Next;
+    }
+
+    adrNode StartNode = N;
+
+    if (StartNode == NULL)
+        return;
+
+    stack<adrNode> Stak;
+
+    Stak.push(StartNode);
+
+    cout << "DFS Traversal: ";
+    while (!Stak.empty())
+    {
+        adrNode nodeBantu = Stak.top();
+        Stak.pop();
+
+        if (nodeBantu->visited == 0)
+        {
+            nodeBantu->visited = 1;
+            cout << nodeBantu->info << " - ";
+
+            // masukkan tetangga ke stack
+            adrEdge edgeBantu = nodeBantu->firstEdge;
+            while (edgeBantu != NULL)
+            {
+                if (edgeBantu->Node->visited == 0)
+                {
+                    Stak.push(edgeBantu->Node);
+                }
+                edgeBantu = edgeBantu->Next;
+            }
+        }
+    }
+    cout << endl;
+}
+
+// Soal 3
+void PrintBFS(Graph G, adrNode N)
+{
+    adrNode nodeReset = G.first;
+    while (nodeReset != NULL)
+    {
+        nodeReset->visited = 0;
+        nodeReset = nodeReset->Next;
+    }
+
+    adrNode StartNode = N;
+
+    if (StartNode == NULL)
+        return;
+
+    queue<adrNode> Qyu;
+
+    // Enqueue start
+    Qyu.push(StartNode);
+    StartNode->visited = 1;
+
+    cout << "BFS Traversal: ";
+    while (!Qyu.empty())
+    {
+        adrNode nodeBantu = Qyu.front();
+        Qyu.pop();
+        cout << nodeBantu->info << " - ";
+
+        // Cek semua tetangga atau edge nya
+        adrEdge edgeBantu = nodeBantu->firstEdge;
+        while (edgeBantu != NULL)
+        {
+            if (edgeBantu->Node->visited == 0)
+            {
+                edgeBantu->Node->visited = 1;
+                Qyu.push(edgeBantu->Node);
+            }
+            edgeBantu = edgeBantu->Next;
+        }
+    }
+    cout << endl;
+}
+
+// Fungsi bantu
+adrNode AlokasiNode(infoGraph X)
+{
+    adrNode newNode = new ElmNode;
+    newNode->firstEdge = Nil;
+    newNode->Next = Nil;
+    newNode->visited = 0;
+    newNode->info = X;
+    return newNode;
+}
+
+adrEdge AlokasiEdge(adrNode N)
+{
+    adrEdge newEdge = new ElmEdge;
+    newEdge->Next = Nil;
+    newEdge->Node = N;
+    return newEdge;
+}
+
+adrNode FindNode(Graph G, infoGraph X)
+{
+    adrNode temp = G.first;
+    while (temp != Nil && temp->info != X)
+    {
+        temp = temp->Next;
+    }
+    return temp;
+}
 
 ```
 
 #### main.cpp
 
 ```C++
+#include "graphLat.h"
 
+int main()
+{
+     Graph G;
+     CreateGraph(G);
+
+     InsertNode(G, 'A');
+     InsertNode(G, 'B');
+     InsertNode(G, 'C');
+     InsertNode(G, 'D');
+     InsertNode(G, 'E');
+     InsertNode(G, 'F');
+     InsertNode(G, 'G');
+     InsertNode(G, 'H');
+
+     adrNode NodeA = FindNode(G, 'A');
+     adrNode NodeB = FindNode(G, 'B');
+     adrNode NodeC = FindNode(G, 'C');
+     adrNode NodeD = FindNode(G, 'D');
+     adrNode NodeE = FindNode(G, 'E');
+     adrNode NodeF = FindNode(G, 'F');
+     adrNode NodeG = FindNode(G, 'G');
+     adrNode NodeH = FindNode(G, 'H');
+
+     ConnectNode(NodeA, NodeB);
+     ConnectNode(NodeA, NodeC);
+     ConnectNode(NodeB, NodeD);
+     ConnectNode(NodeB, NodeE);
+     ConnectNode(NodeC, NodeF);
+     ConnectNode(NodeC, NodeG);
+     ConnectNode(NodeD, NodeH);
+     ConnectNode(NodeE, NodeH);
+     ConnectNode(NodeF, NodeH);
+     ConnectNode(NodeG, NodeH);
+
+     cout << "==== PRINT INFO GRAPH ====" << endl;
+     PrintInfoGraph(G);
+
+     // Soal 2
+     cout << endl
+          << "==== PRINT DFS ====" << endl;
+     PrintDFS(G, NodeE);
+
+     // Soal 3
+     cout << endl
+          << "==== PRINT BFS ====" << endl;
+     PrintBFS(G, NodeB);
+     return 0;
+}
 ```
 
 ### Output Unguided 3 :
 
 ##### Output 1
 
-![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan13_Modul13/Unguided/screenshot/soal_3.png)
+![Screenshot Output Unguided 3](https://github.com/aflahrizkyadhafin-tlu/103112400223_Aflah-Rizkyadhafin-Nurfikri_StrukturData/blob/main/Pertemuan14_Modul14/Unguided/screenshot/soal_3.png)
 
-Melakukan operasi delete untuk Node Parent dengan ID Parent == G004, termasuk menghapus seluruh child yang berada di dalamnya.
+Pada bagian ketiga ini, program menyediakan algoritma penelusuran graf yaitu BFS (Breadth-First Search) menggunakan queue untuk mengunjungi seluruh node yang terhubung dari titik awal tertentu.
 
 ## Kesimpulan
 
-Struktur data tipe Multi Linked List memudahkan pengembangan aplikasi dengan data yang saling terhubung, di mana setiap elemen memiliki hubungan satu sama lain.
+Menggunakan struktur data tipe tree akan memiliki keuntungan, karena data yang disimpan bisa disesuaikan urutan/kelompoknya dengan data parentnya. Penelusuran dengan tree juga bisa terjadi lebih cepat, berkat tersusunya setiap node dengan lebih rapih sesuai dengan kondisi.
 
 ## Referensi
 

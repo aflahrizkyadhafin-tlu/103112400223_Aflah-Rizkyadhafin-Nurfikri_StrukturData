@@ -52,7 +52,7 @@ void PrintInfoGraph(Graph G)
         adrEdge edgeBantu = nodeBantu->firstEdge;
         while (edgeBantu != NULL)
         {
-            cout << edgeBantu->Node->info << " "; // Akses info dari node tujuan
+            cout << edgeBantu->Node->info << " ";
             edgeBantu = edgeBantu->Next;
         }
         cout << endl;
@@ -90,7 +90,6 @@ void PrintDFS(Graph G, adrNode N)
             nodeBantu->visited = 1;
             cout << nodeBantu->info << " - ";
 
-            // masukkan tetangga ke stack
             adrEdge edgeBantu = nodeBantu->firstEdge;
             while (edgeBantu != NULL)
             {
@@ -122,7 +121,6 @@ void PrintBFS(Graph G, adrNode N)
 
     queue<adrNode> Qyu;
 
-    // Enqueue start
     Qyu.push(StartNode);
     StartNode->visited = 1;
 
@@ -133,7 +131,6 @@ void PrintBFS(Graph G, adrNode N)
         Qyu.pop();
         cout << nodeBantu->info << " - ";
 
-        // Cek semua tetangga atau edge nya
         adrEdge edgeBantu = nodeBantu->firstEdge;
         while (edgeBantu != NULL)
         {
