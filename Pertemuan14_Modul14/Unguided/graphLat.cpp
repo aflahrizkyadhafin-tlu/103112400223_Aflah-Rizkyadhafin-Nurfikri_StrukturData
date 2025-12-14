@@ -105,6 +105,49 @@ void PrintDFS(Graph G, adrNode N)
     cout << endl;
 }
 
+// Soal 3
+void PrintBFS(Graph G, adrNode N)
+{
+    adrNode nodeReset = G.first;
+    while (nodeReset != NULL)
+    {
+        nodeReset->visited = 0;
+        nodeReset = nodeReset->Next;
+    }
+
+    adrNode StartNode = N;
+
+    if (StartNode == NULL)
+        return;
+
+    queue<adrNode> Qyu;
+
+    // Enqueue start
+    Qyu.push(StartNode);
+    StartNode->visited = 1;
+
+    cout << "BFS Traversal: ";
+    while (!Qyu.empty())
+    {
+        adrNode nodeBantu = Qyu.front();
+        Qyu.pop();
+        cout << nodeBantu->info << " - ";
+
+        // Cek semua tetangga atau edge nya
+        adrEdge edgeBantu = nodeBantu->firstEdge;
+        while (edgeBantu != NULL)
+        {
+            if (edgeBantu->Node->visited == 0)
+            {
+                edgeBantu->Node->visited = 1;
+                Qyu.push(edgeBantu->Node);
+            }
+            edgeBantu = edgeBantu->Next;
+        }
+    }
+    cout << endl;
+}
+
 // Fungsi bantu
 adrNode AlokasiNode(infoGraph X)
 {
@@ -122,4 +165,14 @@ adrEdge AlokasiEdge(adrNode N)
     newEdge->Next = Nil;
     newEdge->Node = N;
     return newEdge;
+}
+
+adrNode FindNode(Graph G, infoGraph X)
+{
+    adrNode temp = G.first;
+    while (temp != Nil && temp->info != X)
+    {
+        temp = temp->Next;
+    }
+    return temp;
 }

@@ -3,6 +3,7 @@
 #define Nil NULL
 #include <iostream>
 #include <stack>
+#include <queue>
 using namespace std;
 
 typedef char infoGraph;
@@ -36,8 +37,11 @@ void PrintInfoGraph(Graph G);
 // Nomor 2
 void PrintDFS(Graph G, adrNode N);
 
+// Nomor 3
+void PrintBFS(Graph G, adrNode N);
+
 // Fungsi bantu
 adrNode AlokasiNode(infoGraph X);
 adrEdge AlokasiEdge(adrNode N);
-
+adrNode FindNode(Graph G, infoGraph X);
 #endif
