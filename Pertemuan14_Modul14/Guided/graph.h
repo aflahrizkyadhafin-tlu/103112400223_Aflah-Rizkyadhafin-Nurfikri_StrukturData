@@ -28,8 +28,8 @@ struct Graph
 };
 
 void CreateGraph(Graph &G);
-adrNode alokasiNode(infoGraph data);
-adrEdge alokasiEdge(adrNode nodeTujuan);
+adrNode AlokasiNode(infoGraph data);
+adrEdge AlokasiEdge(adrNode nodeTujuan);
 void InsertNode(Graph &G, infoGraph data);
 adrNode FindNode(Graph G, infoGraph data);
 void ConnectNode(Graph &G, infoGraph info1, infoGraph info2);
