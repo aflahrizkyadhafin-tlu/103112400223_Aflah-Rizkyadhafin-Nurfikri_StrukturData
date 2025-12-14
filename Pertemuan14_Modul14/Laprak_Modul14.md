@@ -4,12 +4,17 @@
 
 ## Dasar Teori
 
+Graph adalah struktur data non-linier yang terbentuk dari himpunan simpul (vertex) dan himpunan sisi (edge), di mana simpul mewakili entitas data dan sisi merepresentasikan hubungan relasi antar simpul tersebut. Berbeda dengan struktur data linier, Graph mampu memodelkan masalah kompleks yang melibatkan keterhubungan banyak arah, seperti rute transportasi, jaringan komputer, atau jejaring sosial, karena strukturnya memungkinkan relasi antar objek yang tidak terbatas pada urutan sekuensial [1].
+
+Dalam pemrosesannya, Graph sering ditelusuri menggunakan algoritma pencarian seperti Breadth-First Search (BFS) yang menyebar secara melebar atau Depth-First Search (DFS) yang menelusuri kedalaman. Metode penelusuran dan representasi graf ini sangat krusial dalam menyelesaikan berbagai masalah komputasi dan optimasi, seperti penentuan lintasan terpendek (shortest path) antar dua titik lokasi ataupun penyelesaian teka-teki logika [2].
 
 ### A. Graph<br/>
 
-#### 1. Menggunakan multi linked list dengan node tipe SLL
+#### 1. Kelola node dengan menggunakan graph
 
-#### 2. Menggunakan multi linked list dengan node tipe DLL
+#### 2. Print graph secara Breadth-First Search (BFS)
+
+#### 3. Print graph secara Depth-First Search (DFS)
 
 ## Guided
 
@@ -1182,7 +1187,7 @@ Menggunakan struktur data tipe tree akan memiliki keuntungan, karena data yang d
 
 ## Referensi
 
-<br>[1] Sianturi, F. A. (2022). Pemanfaatan Link List Untuk Mengatasi Database Tidak Normal. LOFIAN: Jurnal Teknologi Informasi dan Komunikasi, 2(1), 16-23. 
+<br>[1] Tobing, F. L., & Tobing, F. A. T. (2022). Analisis Perbandingan Algoritma DFS, BFS dan Dijkstra untuk Menentukan Rute Terpendek pada Peta Geografis. Jurnal Mahasiswa Aplikasi Teknologi Komputer dan Informasi (JMApTeKsi), 4(1), 20-26.
 <br>
-<br>[2] Nadika, G. (n.d.). Detail Multi Linked List 1-N: Algoritma dan Struktur Data. Jurnal Struktur Data. Universitas Komputer Indonesia.
+<br>[2] Sari, Y. P., & Nurhadi, A. (2021). Penerapan Algoritma Breadth First Search (BFS) dan Depth First Search (DFS) pada Pencarian Rute Terpendek. Jurnal Sistem Informasi dan Teknologi (JBSITEK), 2(2), 25-32.
 <br>
